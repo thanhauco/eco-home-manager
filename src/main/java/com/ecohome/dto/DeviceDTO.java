@@ -16,7 +16,7 @@ public class DeviceDTO {
     private Long id;
     private String name;
     private DeviceType type;
-    private boolean isOn;
+    private boolean status;
     private Double powerRating;
     private Long roomId;
     private String roomName;

@@ -28,5 +28,5 @@ public class EnergyLog {
     private LocalDateTime timestamp;
 
     @Column(nullable = false)
-    private Double energyConsumed; // in kWh
+    private Double consumption; // in kWh
 }

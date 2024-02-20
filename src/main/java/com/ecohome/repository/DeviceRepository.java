@@ -13,5 +13,5 @@ public interface DeviceRepository extends JpaRepository<Device, Long> {
 
     List<Device> findByType(DeviceType type);
 
-    long countByIsOnTrue();
+    long countByStatusTrue();
 }

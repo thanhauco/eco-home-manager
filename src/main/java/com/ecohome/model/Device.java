@@ -27,7 +27,7 @@ public class Device {
     private DeviceType type;
 
     @Column(nullable = false)
-    private boolean isOn;
+    private boolean status;
 
     private Double powerRating; // in Watts
 
@@ -35,5 +35,7 @@ public class Device {
     @JoinColumn(name = "room_id")
     private Room room;
 
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
     private LocalDateTime lastActive;
 }

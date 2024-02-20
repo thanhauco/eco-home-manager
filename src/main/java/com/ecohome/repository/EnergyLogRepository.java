@@ -13,6 +13,6 @@ import java.util.List;
 public interface EnergyLogRepository extends JpaRepository<EnergyLog, Long> {
     List<EnergyLog> findByDeviceIdAndTimestampBetween(Long deviceId, LocalDateTime start, LocalDateTime end);
 
-    @Query("SELECT SUM(e.energyConsumed) FROM EnergyLog e WHERE e.timestamp BETWEEN :start AND :end")
+    @Query("SELECT SUM(e.consumption) FROM EnergyLog e WHERE e.timestamp BETWEEN :start AND :end")
     Double getTotalEnergyConsumed(@Param("start") LocalDateTime start, @Param("end") LocalDateTime end);
 }
